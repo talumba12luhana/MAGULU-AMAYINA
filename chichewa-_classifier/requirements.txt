@@ -9,17 +9,6 @@ flatbuffers==24.3.25
 fonttools==4.25.0
 fqdn==1.5.1
 gast==0.5.4
-google-api-core==2.19.0
-google-api-python-client==2.48.0
-google-auth==2.30.0
-google-auth-httplib2==0.2.0
-Google-Images-Search==1.4.6
-google-pasta==0.2.0
-googleapis-common-protos==1.63.1
-grpcio==1.64.1
-h5py==3.11.0
-httplib2==0.22.0
-huggingface-hub==0.36.0
 inflection==0.5.1
 isoduration==20.11.0
 jsonpointer==2.1
