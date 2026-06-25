@@ -1,16 +1,22 @@
 from flask import Flask, render_template, request, jsonify
 import joblib
 import re
-import pandas as pd
 from detector import detect_language
 from explainer import get_full_explanation, get_class_comparison
 import os
+import csv
+
 
 app = Flask(__name__)
 
 # ── Load model and dataset ───────────────────────────────────
 model   = joblib.load('chichewa_noun_classifier.pkl')
-dataset = pd.read_csv('chichewa_noun_dataset.csv')
+
+dataset = []
+with open('chichewa_noun_dataset.csv', newline='', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        dataset.append(row)
 dataset = dataset[['singular nouns', 'plural nouns', 'class']].dropna()
 dataset['singular nouns'] = dataset['singular nouns'].str.lower().str.strip()
 dataset['plural nouns']   = dataset['plural nouns'].str.lower().str.strip()
