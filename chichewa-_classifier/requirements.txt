@@ -14,3 +14,10 @@ isoduration==20.11.0
 jsonpointer==2.1
 keras==3.3.3
 libclang==18.1.1
+Flask==3.0.3
+gunicorn==23.0.0
+pandas==2.2.2
+numpy==2.0.1
+scikit-learn==1.5.1
+joblib==1.4.2
+scipy==1.13.1
